@@ -6,7 +6,6 @@ from flask_cors import CORS
 app = Flask(__name__)
 
 CORS(app)
-
 app.register_blueprint(theater_bp, url_prefix='/api')
 
 app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
