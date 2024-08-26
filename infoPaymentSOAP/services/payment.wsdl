@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
-             xmlns:tns="http://localhost:3016/paymentService" 
+             xmlns:tns="http://167.99.154.169:3016/paymentService" 
              xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
              xmlns="http://schemas.xmlsoap.org/wsdl/" 
-             targetNamespace="http://localhost:3016/paymentService" 
+             targetNamespace="http://167.99.154.169:3016/paymentService" 
              name="PaymentService">
 
   <types>
-    <xsd:schema targetNamespace="http://localhost:3016/paymentService">
+    <xsd:schema targetNamespace="http://167.99.154.169:3016/paymentService">
       <xsd:element name="listPaymentRequest" type="xsd:anyType"/>
       <xsd:element name="listPaymentResponse">
         <xsd:complexType>
@@ -50,7 +50,7 @@
   <binding name="PaymentServiceSoapBinding" type="tns:PaymentServicePortType">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
     <operation name="listPayment">
-      <soap:operation soapAction="http://localhost:3016/paymentService/listPayment"/>
+      <soap:operation soapAction="http://167.99.154.169:3016/paymentService/listPayment"/>
       <input>
         <soap:body use="literal"/>
       </input>
@@ -62,7 +62,7 @@
 
   <service name="PaymentService">
     <port name="PaymentServiceSoapPort" binding="tns:PaymentServiceSoapBinding">
-      <soap:address location="http://localhost:3016/wsdl"/>
+      <soap:address location="http://167.99.154.169:3016/wsdl"/>
     </port>
   </service>
 
